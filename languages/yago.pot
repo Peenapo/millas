@@ -1,0 +1,745 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Yago\n"
+"POT-Creation-Date: 2017-02-02 12:44+0200\n"
+"PO-Revision-Date: 2017-02-02 12:44+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bw/core/Bw.php:83 bw/core/Bw.php:85
+msgid "Previous"
+msgstr ""
+
+#: bw/core/Bw.php:91 bw/core/Bw.php:93
+msgid "Next"
+msgstr ""
+
+#: bw/core/Bw.php:134
+msgid "Previous Page"
+msgstr ""
+
+#: bw/core/Bw.php:146
+msgid "Load older articles"
+msgstr ""
+
+#: bw/core/Bw.php:149
+msgid "No more articles"
+msgstr ""
+
+#: bw/core/Bw.php:167
+msgid "Post navigation"
+msgstr ""
+
+#: bw/core/Bw.php:170
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: bw/core/Bw.php:171
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: bw/core/Bw.php:280
+msgid "Home"
+msgstr ""
+
+#: bw/core/Bw.php:292 bw/core/Bw.php:293 bw/core/Bw.php:294
+msgid "Archive for "
+msgstr ""
+
+#: bw/core/Bw.php:295
+msgid "Author Archive"
+msgstr ""
+
+#: bw/core/Bw.php:296
+msgid "Blog Archives"
+msgstr ""
+
+#: bw/core/Bw.php:297
+msgid "Search Results"
+msgstr ""
+
+#: bw/core/Bw_admin_ajax.php:164
+msgid "Error: theme folder not writable"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:14 bw/core/Bw_custom_post_types.php:15
+msgid "Menu Item"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:25
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:26
+msgid "Add New"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:27
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:28
+msgid "Edit"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:29
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:30
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:31 bw/core/Bw_custom_post_types.php:32
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:33
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:34
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:35
+#, php-format
+msgid "No %s found in trash"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:36
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: bw/core/Bw_custom_post_types.php:57
+msgid "Menu Categories"
+msgstr ""
+
+#: bw/core/Bw_guide.php:53
+msgid "Plugins"
+msgstr ""
+
+#: bw/core/Bw_guide.php:54
+msgid "Child Theme"
+msgstr ""
+
+#: bw/core/Bw_guide.php:66
+msgid "Not complete"
+msgstr ""
+
+#: bw/core/Bw_guide.php:67
+msgid "Complete"
+msgstr ""
+
+#: bw/core/Bw_guide.php:68
+msgid "API Connection: Disconnected"
+msgstr ""
+
+#: bw/core/Bw_guide.php:69
+msgid "API Connection: Connected"
+msgstr ""
+
+#: bw/core/Bw_guide.php:70
+msgid "Not Imported"
+msgstr ""
+
+#: bw/core/Bw_guide.php:71
+msgid "Imported"
+msgstr ""
+
+#: bw/core/Bw_guide.php:72
+msgid "RECOMMENDED"
+msgstr ""
+
+#: bw/core/Bw_guide.php:77
+msgid "Default Demo Version"
+msgstr ""
+
+#: bw/core/Bw_guide.php:78
+msgid ""
+"What's Included?: posts, pages, custom post type contents, dummy images, "
+"customizer settings, menus and static pages."
+msgstr ""
+
+#: bw/core/Bw_guide.php:101
+msgid "API Connection: Cheating?"
+msgstr ""
+
+#: bw/core/Bw_guide.php:102
+msgid "API Connection: An API token is required."
+msgstr ""
+
+#: bw/core/Bw_guide.php:103
+msgid "API Connection: API error."
+msgstr ""
+
+#: bw/core/Bw_guide.php:201
+#, php-format
+msgid ""
+"%sThe demo data may fail to import properly due to PHP configurations on "
+"your server. It is recommended to fix the reported in %s system "
+"configurations."
+msgstr ""
+
+#: bw/core/Bw_guide.php:201
+msgid "RED"
+msgstr ""
+
+#: bw/core/Bw_guide.php:216 bw/core/Bw_guide.php:217
+msgid "Setup Guide"
+msgstr ""
+
+#: bw/core/Bw_guide.php:231
+msgid "Updates"
+msgstr ""
+
+#: bw/core/Bw_guide.php:232
+msgid "Import Demo"
+msgstr ""
+
+#: bw/core/Bw_guide.php:233
+msgid "Maps"
+msgstr ""
+
+#: bw/core/Bw_guide.php:234
+msgid "Customize"
+msgstr ""
+
+#: bw/core/Bw_guide.php:235
+msgid "Get Involved"
+msgstr ""
+
+#: bw/core/Bw_menu.php:27
+msgid "Back"
+msgstr ""
+
+#: bw/core/Bw_setup.php:51
+msgid "Primary Menu"
+msgstr ""
+
+#: bw/core/Bw_setup.php:173
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:18
+#: bw/lib/customizer/customizer-mods.php:115
+msgid "General"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:26
+msgid "Fonts"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:34
+msgid "Colors"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:42
+#: bw/lib/customizer/customizer-mods.php:299
+msgid "Header"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:50
+#: bw/lib/customizer/customizer-mods.php:311
+msgid "Footer"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:58
+msgid "Blog"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:66
+msgid "Social"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:79
+msgid "Logo"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:88
+msgid "Custom JavaScript"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:97
+msgid "Transitions"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:106
+msgid "Header Cover"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:124
+#: bw/lib/customizer/customizer-mods.php:432
+msgid "Body Font"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:133
+#: bw/lib/customizer/customizer-mods.php:442
+msgid "Logo Font"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:142
+#: bw/lib/customizer/customizer-mods.php:518
+msgid "Navigation Font"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:151
+#: bw/lib/customizer/customizer-mods.php:648
+msgid "Headings Font"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:160
+#: bw/lib/customizer/customizer-mods.php:679
+msgid "Dropcap Font"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:176
+msgid "Retina Logo"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:187
+msgid "Logo padding"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:216
+msgid "Copyright Text Navigation First Line"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:227
+msgid "Copyright Text"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:237
+msgid "Background Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:253
+msgid "Text Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:270
+msgid "Footer Padding"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:323
+msgid "Enable Back To Top Button"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:333
+msgid "Text"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:343
+msgid "Enable Ajax Navigation"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:353
+msgid "Default Cover Image"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:363
+msgid "Cover Homepage Title"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:366
+msgid "Welcome to Tindly"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:373
+msgid "Title Font Size"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:394
+msgid "Default Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:423
+msgid "404 Cover Image"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:453
+msgid "Logo Font Weight"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:474
+msgid "Logo Font Size"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:496
+#: bw/lib/customizer/customizer-mods.php:575
+msgid "Text Transform"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:529
+msgid "Navigation Font Size"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:551
+msgid "Navigation Font Height"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:598
+msgid "Navigation Font Space"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:659
+msgid "Headings Font Weight"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:689
+msgid "Accent Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:717
+msgid "Post Accent Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:740
+msgid "Dropcap Text Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:750
+msgid "Dropcap Shadow Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:760
+msgid "Tag Background Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:776
+msgid "Tag Text Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:793
+msgid "Buttons Background Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:809
+msgid "Menu Background Color"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:832
+msgid "Display Dropcap"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:842
+msgid "Display Author"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:852
+msgid "Display Categories"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:862
+msgid "Display Tags"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:872
+msgid "Display Related Articles"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:882
+msgid "Enable Article Share"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:892
+msgid "Enable Share With Facebook"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:902
+msgid "Enable Share With Twitter"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:912
+msgid "Enable Share With Pinterest"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:922
+msgid "Enable Share With Google"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:932
+msgid "Enable Header Social Icons"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:943 templates/social-meta-icons.php:19
+msgid "Facebook"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:944 templates/social-meta-icons.php:24
+msgid "Twitter"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:945
+msgid "Google Plus"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:946
+msgid "Linkedin"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:947
+msgid "Youtube"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:948
+msgid "Vimeo"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:949
+msgid "Instagram"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:950
+msgid "Flickr"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:951
+msgid "Dribbble"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:952
+msgid "Github"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:953 templates/social-meta-icons.php:29
+msgid "Pinterest"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:954
+msgid "Behance"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:955
+msgid "Xing"
+msgstr ""
+
+#: bw/lib/customizer/customizer-mods.php:956
+msgid "500px"
+msgstr ""
+
+#: bw/templates/guide.php:9
+msgid ""
+"Please activate the required plugins in order to use all the features of the "
+"theme"
+msgstr ""
+
+#: bw/templates/guide_header.php:3
+#, php-format
+msgid "Welcome to %s %s"
+msgstr ""
+
+#: bw/templates/guide_header.php:4
+msgid ""
+"Use the steps below to start building your new website. If you have any "
+"questions please review the online documentation or submit a new support "
+"ticket. We will be happy to help."
+msgstr ""
+
+#: bw/templates/guide_header.php:5
+msgid "Online documentation"
+msgstr ""
+
+#: bw/templates/guide_header.php:6
+msgid "Submit a ticket"
+msgstr ""
+
+#: bw/templates/support/child.php:5 bw/templates/support/child.php:16
+msgid "Install a Child Theme"
+msgstr ""
+
+#: bw/templates/support/child.php:7
+msgid ""
+"A child theme is a theme that inherits the functionality and styling of "
+"another theme, called the parent theme. Child themes are the recommended way "
+"of modifying an existing theme."
+msgstr ""
+
+#: bw/templates/support/child.php:9
+msgid "There are a few reasons why you would want to use a child theme:"
+msgstr ""
+
+#: bw/templates/support/child.php:11
+msgid ""
+"If you modify a theme directly and it is updated, then your modifications "
+"may be lost. By using a child theme you will ensure that your modifications "
+"are preserved."
+msgstr ""
+
+#: bw/templates/support/child.php:12
+msgid "Using a child theme can speed up development time."
+msgstr ""
+
+#: bw/templates/support/child.php:13
+msgid ""
+"Using a child theme is a great way to learn about WordPress theme "
+"development."
+msgstr ""
+
+#: bw/templates/support/child.php:16 bw/templates/support/child.php:18
+msgid "Child Theme Installed"
+msgstr ""
+
+#: bw/templates/support/plugins.php:6
+msgid "Install Required Plugins"
+msgstr ""
+
+#: bw/templates/support/plugins.php:7
+#, php-format
+msgid ""
+"A plugin is a piece of software that can extend functionality or add new "
+"features to your WordPress websites. Before you can use all the cool stuff "
+"of %s you must first install the required plugins."
+msgstr ""
+
+#: bw/templates/support/plugins.php:21
+msgid "Install Plugins"
+msgstr ""
+
+#: bw/templates/support/plugins.php:23
+msgid "Plugins Installed"
+msgstr ""
+
+#: bw/widgets/bw_widgets_recent_posts.php:16
+msgid "Recent Posts"
+msgstr ""
+
+#: comments.php:17
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:26 comments.php:47
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:29 comments.php:50
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:30 comments.php:51
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr ""
+
+#: searchform.php:3
+msgid "Search and hit enter..."
+msgstr ""
+
+#: templates/content/content-none.php:17
+msgid "Nothing was found! Publish your first post."
+msgstr ""
+
+#: templates/content/content-none.php:21
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: templates/content/content-none.php:26
+msgid ""
+"It seems we can't find what you're looking for. Perhaps searching can help."
+msgstr ""
+
+#: templates/content/content-page.php:18 templates/content/content.php:37
+msgid "Pages:"
+msgstr ""
+
+#: templates/content/content.php:32
+#, php-format
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: templates/content/content.php:47
+msgid "Posted in:"
+msgstr ""
+
+#: templates/content/content.php:53
+msgid "Tagged as:"
+msgstr ""
+
+#: templates/header/header.php:5
+msgid "Close"
+msgstr ""
+
+#: templates/page-header.php:27
+msgid "Shop"
+msgstr ""
+
+#: templates/page-header.php:30
+msgid "Results for: "
+msgstr ""
+
+#: templates/page-header.php:32
+msgid "404, Sorry, nothing was found here.."
+msgstr ""
+
+#: templates/related-articles.php:25
+msgid "Related articles:"
+msgstr ""
+
+#: templates/related-articles.php:51 templates/related-articles.php:55
+msgid "No related articles found."
+msgstr ""
+
+#: templates/social-meta-icons.php:9
+msgid "Share article:"
+msgstr ""
+
+#: templates/social-meta-icons.php:34
+msgid "Google"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Yago"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://peenapo.com/wordpress-themes/blog/yago/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Tindly is a very simple personal / blogger theme, packed with stunning "
+"transition and animation effects. It is perfect for displaying content. "
+"Super fast ajax navigation."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Peenapo"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://peenapo.com"
+msgstr ""
