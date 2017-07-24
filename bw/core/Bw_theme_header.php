@@ -8,7 +8,7 @@ class Bw_theme_header {
         # assign header settings
         add_action( 'wp_head', array( 'Bw_theme_header', 'wp_head' ) );
         # run at the very start of the "get_header" function call
-        add_action( 'get_header', array( 'Bw_theme_header', 'admin_bar_styles' ) );
+        add_action( 'get_header', array( 'Bw_theme_header', 'inline_styles' ) );
         # enqueue additional styles
         add_action( 'wp_enqueue_scripts', array( 'Bw_theme_header', 'wp_enqueue_scripts' ), 11 );
 		# custom body classes
@@ -26,7 +26,8 @@ class Bw_theme_header {
 
     }
 
-    static function admin_bar_styles() {
+    static function inline_styles() {
+        self::add_css('.site-content {margin-top:' . (int) Bw::get_theme_option( 'fonts_navigation_height', 100 ) . 'px;}');
         if( is_admin_bar_showing() ) {
             self::add_css("
                 .site-header {top:32px;}

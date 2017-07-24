@@ -335,11 +335,13 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_logo',
     'id'                => $theme_prefix . 'fonts_logo_font_weight',
-    'default'           => '400',
+    'default'           => '700',
     'option'            => 'select',
     'choices'           => array(
+        '100'           => 'Thin',
         '400'           => 'Regular',
         '700'           => 'Bold',
+        '900'           => 'Black',
     ),
     'transport'         => 'postMessage',
     'css'               => array(
@@ -356,7 +358,7 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_logo',
     'id'                => $theme_prefix . 'fonts_logo_font_size',
-    'default'           => 40,
+    'default'           => 60,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
@@ -373,7 +375,7 @@ $options[] = array(
     )
 );
 
-$options[] = array(
+/*$options[] = array(
     'title'             => esc_html__( 'Logo padding', 'yago' ),
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_logo',
@@ -400,7 +402,7 @@ $options[] = array(
             'unit'              => 'px'
         ),
     )
-);
+);*/
 
 $options[] = array(
     'title'             => esc_html__( 'Text Transform', 'yago' ),
@@ -462,7 +464,7 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_navigation',
     'id'                => $theme_prefix . 'fonts_navigation_height',
-    'default'           => 60,
+    'default'           => 100,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
@@ -553,6 +555,29 @@ $options[] = array(
             'unit'              => 'px'
         ),
     )
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Headings Font Weight', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'fonts_navigation',
+    'id'                => $theme_prefix . 'fonts_navigation_font_weight',
+    'default'           => '400',
+    'option'            => 'select',
+    'choices'           => array(
+        '100'           => 'Thin',
+        '400'           => 'Regular',
+        '700'           => 'Bold',
+        '900'           => 'Black',
+    ),
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'font-weight',
+        'selector'          => '.main-navigation .menu > li > a',
+        'unit'              => ''
+    ),
+    'sanitize_callback' => '',
+    'type'              => 'control'
 );
 
 $options[] = array( 'title' => esc_html__( 'Headings Font', 'yago' ),
