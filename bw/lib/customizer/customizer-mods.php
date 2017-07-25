@@ -205,7 +205,7 @@ $options[] = array(
     'transport'         => 'postMessage',
 );
 
-$options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
+/*$options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
     'description'       => '',
     'section'           => $theme_prefix . 'footer_general',
     'id'                => $theme_prefix . 'footer_general_bg_color',
@@ -219,7 +219,7 @@ $options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
         'selector'          => '.site-footer',
         'unit'              => ''
     )
-);
+);*/
 
 $options[] = array( 'title' => esc_html__( 'Text Color', 'yago' ),
     'description'       => '',
@@ -653,7 +653,7 @@ $options[] = array( 'title' => esc_html__( 'Accent Color', 'yago' ),
     'css'               => array(
         array(
             'property'          => 'color',
-            'selector'          => 'a, .bw-carousel-slide .bw-carousel-text p, .bw-social li a:hover, .entry-title a:hover, .entry-caption, .gallery-caption, .wp-caption .wp-caption-text, .author-name a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .bw-page-header .bw-blog-description, .bw-page-header p',
+            'selector'          => 'a, .bw-carousel-slide .bw-carousel-text p, .entry-title a:hover, .entry-caption, .gallery-caption, .wp-caption .wp-caption-text, .author-name a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .bw-page-header .bw-blog-description, .bw-page-header p',
             'unit'              => ''
         ),
         array(

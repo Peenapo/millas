@@ -10,9 +10,17 @@
 
 get_header(); ?>
 
-<?php get_template_part('templates/page-header'); ?>
+<?php
 
-<div class="container bw-row<?php if( Bw::has_sidebar() ) { echo ' bw-has-sidebar'; } ?>">
+$is_builder_used = class_exists('Playouts_Public') and Playouts_Public::is_builder_used();
+
+if( ! $is_builder_used ) {
+    get_template_part('templates/page-header');
+}
+
+?>
+
+<div class="container<?php if( ! $is_builder_used ) { echo ' bw-row'; } if( Bw::has_sidebar() ) { echo ' bw-has-sidebar'; } ?>">
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">

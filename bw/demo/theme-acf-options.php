@@ -256,9 +256,9 @@ if(function_exists("register_field_group")) {
 					array(
 						0 => 
 						array(
-							'field' => 'field_58485a5bb727f',
+							'field' => 'null',
 							'operator' => '==',
-							'value' => '1',
+							'value' => '',
 						),
 					),
 					'allorany' => 'all',
@@ -267,7 +267,7 @@ if(function_exists("register_field_group")) {
 				array(
 					'full' => 
 					array(
-						'label' => 'Fullwidth',
+						'label' => 'Boxed',
 						'img' => 'layout_page/portfolio-no-sidebar.png',
 					),
 					'sidebar' => 
@@ -348,6 +348,36 @@ if(function_exists("register_field_group")) {
 				'append' => '',
 				'formatting' => 'html',
 				'maxlength' => '',
+				'field_group' => 4188,
+			),
+			3 => 
+			array(
+				'key' => 'field_5976f5c2ac4f7',
+				'label' => 'Use white header text',
+				'name' => 'white_header',
+				'_name' => 'white_header',
+				'type' => 'true_false',
+				'order_no' => 3,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-white_header',
+				'class' => 'true_false',
+				'conditional_logic' => 
+				array(
+					'status' => 0,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_5661828e4ad11',
+							'operator' => '==',
+							'value' => 'full',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'message' => '',
+				'default_value' => 0,
 				'field_group' => 4188,
 			),
 		),

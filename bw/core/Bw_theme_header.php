@@ -44,7 +44,9 @@ class Bw_theme_header {
         if( is_front_page() or is_home() ) { $classes[] = 'bw-homepage'; }
         if( Bw::bwpb_active() ) { $classes[] = 'bwpb-is-active'; }
 
-        if( is_page_template('page-homepage.php') and have_rows('carousel_slides') ) { $classes[] = 'bw-is-carousel'; }
+        if( Bw::get_meta('white_header') ) { $classes[] = 'bw-is-header-light'; }
+
+        if( class_exists('Playouts_Public') and Playouts_Public::is_builder_used() ) { $classes[] = 'bw-is-builder-active'; }
 
 		return $classes;
 
