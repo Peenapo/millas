@@ -34,6 +34,7 @@ class Bw {
             include( BW_FRAME_CORE . 'Bw_theme_fonts.php' );
             include( BW_FRAME_CORE . 'Bw_theme_header.php' );
             include( BW_FRAME_CORE . 'Bw_theme_footer.php' );
+            include( BW_FRAME_CORE . 'Bw_menu.php' );
 
         }else{
 

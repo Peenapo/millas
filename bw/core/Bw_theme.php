@@ -60,34 +60,24 @@ class Bw_theme {
         Bw_theme_fonts::$google_fonts = array(
 
             Bw::$theme_prefix . '_fonts_body_font' => array(
-                'default' => array( 'family' => 'Rubik' ),
-                'selectors' => 'body, .main-navigation .bw-header-line, .bw-masonry-item .entry-title',
-                //'self' => true
+                'default' => array( 'family' => 'Nunito' ),
+                'selectors' => 'body, .main-navigation .bw-header-line, .bw-masonry-item .entry-title', //'self' => true
             ),
             Bw::$theme_prefix . '_fonts_logo_font' => array(
-                'default' => array( 'family' => 'Source Sans Pro' ),
-                //'self' => true,
+                'default' => array( 'family' => 'Overpass' ),
                 'selectors' => '.site-branding .site-title'
             ),
             Bw::$theme_prefix . '_fonts_navigation_font' => array(
-                'default' => array( 'family' => 'Cabin' ),
-                //'self' => true,
+                'default' => array( 'family' => 'Overpass' ),
                 'selectors' => '.main-navigation'
             ),
             Bw::$theme_prefix . '_fonts_headings_font' => array(
-                'default' => array( 'family' => 'Cabin' ),
-                //'self' => true,
-                'selectors' => 'h1,h2,h3,h4,h5,h6, blockquote p'
+                'default' => array( 'family' => 'Overpass' ),
+                'selectors' => 'h1,h2,h3,h4,h5,h6, blockquote p, .bw-footer-logo span'
             ),
-            Bw::$theme_prefix . '_fonts_vintage_font' => array(
-                'default' => array( 'family' => 'Cabin' ),
-                //'self' => true,
-                'selectors' => '.bw-page-header p, .bw-blog-description, .bw-carousel-slide .bw-carousel-text p'
-            ),
-            Bw::$theme_prefix . '_fonts_dropcap_font' => array(
-                'default' => array( 'family' => 'Cabin' ),
-                //'self' => true,
-                'selectors' => '.single-post .entry-content > p:first-of-type:first-letter, .bw-dropcap:first-letter'
+            Bw::$theme_prefix . '_fonts_footer_font' => array(
+                'default' => array( 'family' => 'Nunito' ),
+                'selectors' => '.site-footer'
             ),
 
         );

@@ -35,7 +35,7 @@ audio,canvas,progress,video {display:inline-block;vertical-align:baseline;}
 audio:not([controls]) {display:none;height:0;}
 a {background-color:transparent;}
 a:active,a:hover,a:focus {outline:0;}
-abbr[title] {border-bottom:1px dotted;}
+abbr[title] {text-decoration:none;}
 b,strong {font-weight:bold;}
 dfn {font-style:italic;}
 mark {background:#fff9c0;color:#000;}

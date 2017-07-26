@@ -103,9 +103,18 @@ $options[] = array(
 );
 
 $options[] = array(
-    'title'             => esc_html__( 'General', 'yago' ),
+    'title'             => esc_html__( 'Widgets Area', 'yago' ),
     'panel'             => $theme_prefix . 'footer',
-    'id'                => $theme_prefix . 'footer_general',
+    'id'                => $theme_prefix . 'footer_widgets',
+    'priority'          => 10,
+    'theme_supports'    => '',
+    'type'              => 'section'
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Bottom Bar', 'yago' ),
+    'panel'             => $theme_prefix . 'footer',
+    'id'                => $theme_prefix . 'footer_bottom',
     'priority'          => 10,
     'theme_supports'    => '',
     'type'              => 'section'
@@ -148,18 +157,9 @@ $options[] = array(
 );
 
 $options[] = array(
-    'title'             => esc_html__( 'Vintage Elements Font', 'yago' ),
+    'title'             => esc_html__( 'Footer Font', 'yago' ),
     'panel'             => $theme_prefix . 'fonts',
-    'id'                => $theme_prefix . 'fonts_vintage',
-    'priority'          => 10,
-    'theme_supports'    => '',
-    'type'              => 'section'
-);
-
-$options[] = array(
-    'title'             => esc_html__( 'Dropcap Font', 'yago' ),
-    'panel'             => $theme_prefix . 'fonts',
-    'id'                => $theme_prefix . 'fonts_dropcap',
+    'id'                => $theme_prefix . 'fonts_footer',
     'priority'          => 10,
     'theme_supports'    => '',
     'type'              => 'section'
@@ -184,20 +184,173 @@ $options[] = array(
 );
 
 $options[] = array(
-    'title'             => esc_html__( 'Copyright Text', 'yago' ),
-    'section'           => $theme_prefix . 'footer_general',
-    'id'                => 'bw_footer_copy',
+    'title'             => esc_html__( 'Enable Widget Area', 'yago' ),
+    'section'           => $theme_prefix . 'footer_widgets',
+    'id'                => $theme_prefix . 'footer_widgets_enable',
     'default'           => '',
+    'option'            => 'checkbox',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+);
+
+    $options[] = array(
+        'title'             => esc_html__( 'Enable Widget Column 1', 'yago' ),
+        'section'           => $theme_prefix . 'footer_widgets',
+        'id'                => $theme_prefix . 'footer_widgets_enable_col_1',
+        'default'           => '1',
+        'option'            => 'checkbox',
+        'sanitize_callback' => '',
+        'type'              => 'control',
+    );
+    $options[] = array(
+        'title'             => esc_html__( 'Enable Widget Column 2', 'yago' ),
+        'section'           => $theme_prefix . 'footer_widgets',
+        'id'                => $theme_prefix . 'footer_widgets_enable_col_2',
+        'default'           => '1',
+        'option'            => 'checkbox',
+        'sanitize_callback' => '',
+        'type'              => 'control',
+    );
+    $options[] = array(
+        'title'             => esc_html__( 'Enable Widget Column 3', 'yago' ),
+        'section'           => $theme_prefix . 'footer_widgets',
+        'id'                => $theme_prefix . 'footer_widgets_enable_col_3',
+        'default'           => '1',
+        'option'            => 'checkbox',
+        'sanitize_callback' => '',
+        'type'              => 'control',
+    );
+    $options[] = array(
+        'title'             => esc_html__( 'Enable Widget Column 4', 'yago' ),
+        'section'           => $theme_prefix . 'footer_widgets',
+        'id'                => $theme_prefix . 'footer_widgets_enable_col_4',
+        'default'           => '1',
+        'option'            => 'checkbox',
+        'sanitize_callback' => '',
+        'type'              => 'control',
+    );
+
+$options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'footer_widgets',
+    'id'                => $theme_prefix . 'footer_widgets_bg_color',
+    'default'           => '#2b2c33',
+    'option'            => 'color',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'background-color',
+        'selector'          => '.bw-footer-widgets-outer',
+        'unit'              => ''
+    )
+);
+
+$options[] = array( 'title' => esc_html__( 'Text Color', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'footer_widgets',
+    'id'                => $theme_prefix . 'footer_widgets_text_color',
+    'default'           => '#fff',
+    'option'            => 'color',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        array(
+            'property'          => 'color',
+            'selector'          => '.bw-footer-widgets-outer .bw-footer-widgets, .bw-footer-widgets-outer .bw-footer-widgets a',
+            'unit'              => ''
+        ),
+        array(
+            'property'          => 'border-color',
+            'selector'          => '.bw-footer-widgets-outer .bw-footer-widgets a',
+            'unit'              => ''
+        )
+    )
+);
+
+$options[] = array( 'title' => esc_html__( 'Heading Color', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'footer_widgets',
+    'id'                => $theme_prefix . 'footer_widgets_heading_color',
+    'default'           => '#828285',
+    'option'            => 'color',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        array(
+            'property'          => 'color',
+            'selector'          => '.bw-footer-widgets h4',
+            'unit'              => ''
+        )
+    )
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Padding', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'footer_widgets',
+    'id'                => $theme_prefix . 'footer_widgets_padding',
+    'default'           => 90,
+    'option'            => 'range',
+    'sanitize_callback' => '',
+    'input_attrs'       => array(
+        'min'   => 0,
+        'max'   => 100,
+        'step'  => 1,
+    ),
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        array(
+            'property'          => 'padding-top',
+            'selector'          => '.bw-footer-widgets-outer',
+            'unit'              => 'px'
+        ),
+        array(
+            'property'          => 'padding-bottom',
+            'selector'          => '.bw-footer-widgets-outer, .bw-footer-logo',
+            'unit'              => 'px'
+        )
+    )
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Enable Logo', 'yago' ),
+    'section'           => $theme_prefix . 'footer_widgets',
+    'id'                => $theme_prefix . 'footer_widgets_logo',
+    'default'           => '',
+    'option'            => 'checkbox',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Copyright Text', 'yago' ),
+    'section'           => $theme_prefix . 'footer_bottom',
+    'id'                => 'bw_footer_copy',
+    'default'           => '2017 Copyright. Designed by <a href="https://www.peenapo.com" target="_blank">Peenapo</a>. Powered by Wordpress',
     'option'            => 'text',
     'sanitize_callback' => '',
     'type'              => 'control',
     'transport'         => 'postMessage',
 );
 
+$options[] = array(
+    'title'             => esc_html__( 'Enable Back To Top Button', 'yago' ),
+    'section'           => $theme_prefix . 'footer_bottom',
+    'id'                => $theme_prefix . 'footer_bottom_back_top',
+    'default'           => '',
+    'option'            => 'checkbox',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+);
+
 /*$options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
     'description'       => '',
-    'section'           => $theme_prefix . 'footer_general',
-    'id'                => $theme_prefix . 'footer_general_bg_color',
+    'section'           => $theme_prefix . 'footer_bottom',
+    'id'                => $theme_prefix . 'footer_bottom_bg_color',
     'default'           => '#f7f7f7',
     'option'            => 'color',
     'sanitize_callback' => '',
@@ -212,8 +365,8 @@ $options[] = array(
 
 $options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
     'description'       => '',
-    'section'           => $theme_prefix . 'footer_general',
-    'id'                => $theme_prefix . 'footer_general_bg_color',
+    'section'           => $theme_prefix . 'footer_bottom',
+    'id'                => $theme_prefix . 'footer_bottom_bg_color',
     'default'           => '#1f2028',
     'option'            => 'color',
     'sanitize_callback' => '',
@@ -228,26 +381,34 @@ $options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
 
 $options[] = array( 'title' => esc_html__( 'Text Color', 'yago' ),
     'description'       => '',
-    'section'           => $theme_prefix . 'footer_general',
-    'id'                => $theme_prefix . 'footer_general_text_color',
+    'section'           => $theme_prefix . 'footer_bottom',
+    'id'                => $theme_prefix . 'footer_bottom_text_color',
     'default'           => '#fff',
     'option'            => 'color',
     'sanitize_callback' => '',
     'type'              => 'control',
     'transport'         => 'postMessage',
     'css'               => array(
-        'property'          => 'color',
-        'selector'          => '.site-footer p',
-        'unit'              => ''
+        array(
+            'property'          => 'color',
+            'selector'          => '.site-footer, .site-footer a',
+            'unit'              => ''
+        ),
+        array(
+            'property'          => 'border-color',
+            'selector'          => '.bw-back-top, .bw-back-top i, .site-footer a',
+            'unit'              => ''
+        ),
     )
 );
 
+
 $options[] = array(
-    'title'             => esc_html__( 'Footer Padding', 'yago' ),
+    'title'             => esc_html__( 'Padding', 'yago' ),
     'description'       => '',
-    'section'           => $theme_prefix . 'footer_general',
-    'id'                => $theme_prefix . 'footer_general_padding',
-    'default'           => 120,
+    'section'           => $theme_prefix . 'footer_bottom',
+    'id'                => $theme_prefix . 'footer_bottom_padding',
+    'default'           => 85,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
@@ -260,12 +421,12 @@ $options[] = array(
     'css'               => array(
         array(
             'property'          => 'padding-top',
-            'selector'          => '.bw-copyright-p',
+            'selector'          => '.bw-copyright',
             'unit'              => 'px'
         ),
         array(
             'property'          => 'padding-bottom',
-            'selector'          => '.bw-copyright-p',
+            'selector'          => '.bw-copyright',
             'unit'              => 'px'
         )
     )
@@ -293,26 +454,6 @@ $options[] = array(
     'type'              => 'control',
     'transport'         => 'postMessage',
     'description'       => 'You can paste here your Google Analytics tracking code (or for what matters any tracking code) and it will appear on every page.',
-);
-
-$options[] = array(
-    'title'             => esc_html__( 'Enable Back To Top Button', 'yago' ),
-    'section'           => $theme_prefix . 'back_top',
-    'id'                => $theme_prefix . 'back_top_enable',
-    'default'           => '',
-    'option'            => 'checkbox',
-    'sanitize_callback' => '',
-    'type'              => 'control',
-);
-
-$options[] = array(
-    'title'             => esc_html__( 'Text', 'yago' ),
-    'section'           => $theme_prefix . 'back_top',
-    'id'                => $theme_prefix . 'back_top_text',
-    'default'           => '',
-    'option'            => 'text',
-    'sanitize_callback' => '',
-    'type'              => 'control',
 );
 
 $options[] = array( 'title'  => esc_html__( 'Body Font', 'yago' ),
@@ -447,7 +588,7 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_navigation',
     'id'                => $theme_prefix . 'fonts_navigation_size',
-    'default'           => 14,
+    'default'           => 13,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
@@ -516,7 +657,7 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_navigation',
     'id'                => $theme_prefix . 'fonts_navigation_space',
-    'default'           => 0,
+    'default'           => 1,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
@@ -538,7 +679,7 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_navigation',
     'id'                => $theme_prefix . 'fonts_navigation_menu_item_space',
-    'default'           => 0,
+    'default'           => 5,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
@@ -585,6 +726,28 @@ $options[] = array(
     'type'              => 'control'
 );
 
+$options[] = array(
+    'title'             => esc_html__( 'Active Underline Position', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'fonts_navigation',
+    'id'                => $theme_prefix . 'fonts_navigation_underline_position',
+    'default'           => 37,
+    'option'            => 'range',
+    'sanitize_callback' => '',
+    'input_attrs'       => array(
+        'min'   => 0,
+        'max'   => 100,
+        'step'  => 1,
+    ),
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'bottom',
+        'selector'          => '.main-navigation ul li.current-menu-item > a:after, .main-navigation ul li.current-menu-ancestor > a:after',
+        'unit'              => 'px'
+    )
+);
+
 $options[] = array( 'title' => esc_html__( 'Headings Font', 'yago' ),
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_headings',
@@ -616,10 +779,10 @@ $options[] = array(
     'type'              => 'control'
 );
 
-$options[] = array( 'title' => esc_html__( 'Vintage Elements Font', 'yago' ),
+$options[] = array( 'title' => esc_html__( 'Footer Font', 'yago' ),
     'description'       => '',
-    'section'           => $theme_prefix . 'fonts_vintage',
-    'id'                => $theme_prefix . 'fonts_vintage_font',
+    'section'           => $theme_prefix . 'fonts_footer',
+    'id'                => $theme_prefix . 'fonts_footer_font',
     'default'           => json_encode( array( 'family' => '' ) ),
     'option'            => 'font',
     'sanitize_callback' => '',
@@ -627,23 +790,47 @@ $options[] = array( 'title' => esc_html__( 'Vintage Elements Font', 'yago' ),
 );
 
 $options[] = array(
-    'title'             => esc_html__( 'Larger Fonts Size for Vintage Elemenets', 'yago' ),
-    'section'           => $theme_prefix . 'fonts_vintage',
-    'id'                => $theme_prefix . 'fonts_vintage_bigger',
-    'default'           => '',
-    'option'            => 'checkbox',
+    'title'             => esc_html__( 'Footer Font Size', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'fonts_footer',
+    'id'                => $theme_prefix . 'fonts_footer_font_size',
+    'default'           => 17,
+    'option'            => 'range',
     'sanitize_callback' => '',
-    'type'              => 'control'
+    'input_attrs'       => array(
+        'min'   => 15,
+        'max'   => 30,
+        'step'  => 1,
+    ),
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'font-size',
+        'selector'          => '.site-footer',
+        'unit'              => 'px'
+    )
 );
 
-$options[] = array( 'title' => esc_html__( 'Dropcap Font', 'yago' ),
+$options[] = array(
+    'title'             => esc_html__( 'Footer Font Heading Size', 'yago' ),
     'description'       => '',
-    'section'           => $theme_prefix . 'fonts_dropcap',
-    'id'                => $theme_prefix . 'fonts_dropcap_font',
-    'default'           => json_encode( array( 'family' => '' ) ),
-    'option'            => 'font',
+    'section'           => $theme_prefix . 'fonts_footer',
+    'id'                => $theme_prefix . 'fonts_footer_font_heading_size',
+    'default'           => 15,
+    'option'            => 'range',
     'sanitize_callback' => '',
-    'type'              => 'control'
+    'input_attrs'       => array(
+        'min'   => 15,
+        'max'   => 30,
+        'step'  => 1,
+    ),
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'font-size',
+        'selector'          => '.site-footer h4',
+        'unit'              => 'px'
+    )
 );
 
 $options[] = array( 'title' => esc_html__( 'Accent Color', 'yago' ),

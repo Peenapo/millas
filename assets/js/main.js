@@ -130,8 +130,10 @@ var App = {
             //$('.bw-add-share').on('click', App.shareSocial);
         //}
 
+        // bind scroll back to the top button
+        $(document).on('click', '.bw-back-top', App.back_top);
         // bind scroll down button
-        $(document).on('click', '.bw-scroll-down', App.scrollDown);
+        $(document).on('click', '.bw-scroll-down', App.scroll_down);
 
     },
 
@@ -148,7 +150,13 @@ var App = {
 
     },*/
 
-    scrollDown: function() {
+    back_top: function() {
+
+        TweenLite.to( window, .6, { scrollTo: 0, ease: Power3.easeInOut } );
+
+    },
+
+    scroll_down: function() {
 
         TweenLite.to( window, .6, { scrollTo: $(window).height(), ease: Power3.easeInOut } );
 

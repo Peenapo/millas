@@ -19,15 +19,55 @@ class Bw_widgets {
 
     static function register_sidebars() {
 
-        /*register_sidebar(array(
+        register_sidebar(array(
             'name'          => esc_html__( 'Sidebar', 'yago' ),
             'id'            => 'sidebar',
             'description'   => 'Main sidebar',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
-        ));*/
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+
+        register_sidebar(array(
+            'name'          => esc_html__( 'Footer Column 1', 'yago' ),
+            'id'            => 'footer_1',
+            'description'   => 'Footer area widgets',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+
+        register_sidebar(array(
+            'name'          => esc_html__( 'Footer Column 2', 'yago' ),
+            'id'            => 'footer_2',
+            'description'   => 'Footer area widgets',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+
+        register_sidebar(array(
+            'name'          => esc_html__( 'Footer Column 3', 'yago' ),
+            'id'            => 'footer_3',
+            'description'   => 'Footer area widgets',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
+
+        register_sidebar(array(
+            'name'          => esc_html__( 'Footer Column 4', 'yago' ),
+            'id'            => 'footer_4',
+            'description'   => 'Footer area widgets',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h4 class="widget-title">',
+            'after_title'   => '</h4>',
+        ));
 
     }
 

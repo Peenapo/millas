@@ -8,7 +8,7 @@
 
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i></i><span><?php esc_html_e('Menu', 'yago'); ?></span></button>
 
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => new Bw_Menu_Walker ) ); ?>
 
 	</nav>
 
