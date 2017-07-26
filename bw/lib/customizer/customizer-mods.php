@@ -184,17 +184,6 @@ $options[] = array(
 );
 
 $options[] = array(
-    'title'             => esc_html__( 'Copyright Text Navigation First Line', 'yago' ),
-    'section'           => $theme_prefix . 'footer_general',
-    'id'                => 'bw_footer_copy_nav',
-    'default'           => '',
-    'option'            => 'text',
-    'sanitize_callback' => '',
-    'type'              => 'control',
-    'transport'         => 'postMessage',
-);
-
-$options[] = array(
     'title'             => esc_html__( 'Copyright Text', 'yago' ),
     'section'           => $theme_prefix . 'footer_general',
     'id'                => 'bw_footer_copy',
@@ -221,11 +210,27 @@ $options[] = array(
     )
 );*/
 
+$options[] = array( 'title' => esc_html__( 'Background Color', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'footer_general',
+    'id'                => $theme_prefix . 'footer_general_bg_color',
+    'default'           => '#1f2028',
+    'option'            => 'color',
+    'sanitize_callback' => '',
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'background-color',
+        'selector'          => '.site-footer',
+        'unit'              => ''
+    )
+);
+
 $options[] = array( 'title' => esc_html__( 'Text Color', 'yago' ),
     'description'       => '',
     'section'           => $theme_prefix . 'footer_general',
     'id'                => $theme_prefix . 'footer_general_text_color',
-    'default'           => '#000',
+    'default'           => '#fff',
     'option'            => 'color',
     'sanitize_callback' => '',
     'type'              => 'control',
@@ -242,12 +247,12 @@ $options[] = array(
     'description'       => '',
     'section'           => $theme_prefix . 'footer_general',
     'id'                => $theme_prefix . 'footer_general_padding',
-    'default'           => 10,
+    'default'           => 120,
     'option'            => 'range',
     'sanitize_callback' => '',
     'input_attrs'       => array(
         'min'   => 0,
-        'max'   => 250,
+        'max'   => 150,
         'step'  => 1,
     ),
     'type'              => 'control',
