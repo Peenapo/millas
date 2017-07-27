@@ -13,6 +13,40 @@ var App = {
         this.bind();
         this.imgLoad();
         this.smartResize();
+        this.megamenu.start();
+
+    },
+
+    megamenu: {
+
+        timeout_hide_menu: [],
+
+        start: function() {
+
+            if( ! $('.bw-is-megamenu').length ) { return; }
+
+            $('.bw-is-megamenu > a').on('mouseenter', function() {
+                var index = $('.bw-is-megamenu').index( $(this).closest('.bw-is-megamenu') );
+                $('.bw-is-megamenu').removeClass('bw-expand-megamenu');
+                clearTimeout( App.megamenu.timeout_hide_menu[ index ] );
+                $(this).closest('.bw-is-megamenu').addClass('bw-expand-megamenu');
+            });
+
+            $('.bw-is-megamenu').on('mouseenter', function() {
+                var index = $('.bw-is-megamenu').index( $(this) );
+                clearTimeout( App.megamenu.timeout_hide_menu[ index ] );
+            }).on('mouseleave', function() {
+                var self = $(this);
+                var index = $('.bw-is-megamenu').index( self );
+                App.megamenu.timeout_hide_menu[ index ] = setTimeout(function() {
+                    self.removeClass('bw-expand-megamenu');
+                }, 300);
+
+            });;
+
+        }
+
+
 
     },
 
@@ -131,7 +165,7 @@ var App = {
         //}
 
         // bind scroll back to the top button
-        $(document).on('click', '.bw-back-top', App.back_top);
+        $(document).on('click', '.bw-back-top-outer', App.back_top);
         // bind scroll down button
         $(document).on('click', '.bw-scroll-down', App.scroll_down);
 

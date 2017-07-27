@@ -27,7 +27,7 @@ class Bw_theme_header {
     }
 
     static function inline_styles() {
-        self::add_css('.site-content {margin-top:' . (int) Bw::get_theme_option( 'fonts_navigation_height', 100 ) . 'px;}');
+        self::add_css('.bw-page-header {padding-top:' . (int) Bw::get_theme_option( 'fonts_navigation_height', 100 ) . 'px;}');
         if( is_admin_bar_showing() ) {
             self::add_css("
                 .site-header {top:32px;}
@@ -47,6 +47,13 @@ class Bw_theme_header {
         if( Bw::get_meta('white_header') ) { $classes[] = 'bw-is-header-light'; }
 
         if( class_exists('Playouts_Public') and Playouts_Public::is_builder_used() ) { $classes[] = 'bw-is-builder-active'; }
+        if( is_page() ) {
+            if( ! Bw::get_meta('hide_title') ) {
+                if( ! Bw::get_meta('dark_header_text') ) {
+                    $classes[] = 'pl-is-header-light';
+                }
+            }
+        }
 
 		return $classes;
 

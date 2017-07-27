@@ -157,6 +157,15 @@ $options[] = array(
 );
 
 $options[] = array(
+    'title'             => esc_html__( 'Sub Headings Font', 'yago' ),
+    'panel'             => $theme_prefix . 'fonts',
+    'id'                => $theme_prefix . 'fonts_sub_headings',
+    'priority'          => 10,
+    'theme_supports'    => '',
+    'type'              => 'section'
+);
+
+$options[] = array(
     'title'             => esc_html__( 'Footer Font', 'yago' ),
     'panel'             => $theme_prefix . 'fonts',
     'id'                => $theme_prefix . 'fonts_footer',
@@ -779,6 +788,38 @@ $options[] = array(
     'type'              => 'control'
 );
 
+$options[] = array( 'title' => esc_html__( 'Sub Headings Font', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'fonts_sub_headings',
+    'id'                => $theme_prefix . 'fonts_sub_headings_font',
+    'default'           => json_encode( array( 'family' => '' ) ),
+    'option'            => 'font',
+    'sanitize_callback' => '',
+    'type'              => 'control'
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Sub Headings Font Size', 'yago' ),
+    'description'       => '',
+    'section'           => $theme_prefix . 'fonts_sub_headings',
+    'id'                => $theme_prefix . 'fonts_sub_headings_font_size',
+    'default'           => 18,
+    'option'            => 'range',
+    'sanitize_callback' => '',
+    'input_attrs'       => array(
+        'min'   => 15,
+        'max'   => 60,
+        'step'  => 1,
+    ),
+    'type'              => 'control',
+    'transport'         => 'postMessage',
+    'css'               => array(
+        'property'          => 'font-size',
+        'selector'          => '.bw-page-header span',
+        'unit'              => 'px'
+    )
+);
+
 $options[] = array( 'title' => esc_html__( 'Footer Font', 'yago' ),
     'description'       => '',
     'section'           => $theme_prefix . 'fonts_footer',
@@ -845,7 +886,7 @@ $options[] = array( 'title' => esc_html__( 'Accent Color', 'yago' ),
     'css'               => array(
         array(
             'property'          => 'color',
-            'selector'          => 'a, .bw-carousel-slide .bw-carousel-text p, .entry-title a:hover, .entry-caption, .gallery-caption, .wp-caption .wp-caption-text, .author-name a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .bw-page-header .bw-blog-description, .bw-page-header p',
+            'selector'          => 'a, .bw-carousel-slide .bw-carousel-text p, .entry-title a:hover, .entry-caption, .gallery-caption, .wp-caption .wp-caption-text, .author-name a, h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .bw-page-header .bw-blog-description, .bw-page-header span',
             'unit'              => ''
         ),
         array(
@@ -888,26 +929,6 @@ $options[] = array( 'title' => esc_html__( 'Post Accent Color', 'yago' ),
             'unit'              => ''
         ),
     )
-);
-
-$options[] = array( 'title' => esc_html__( 'Dropcap Text Color', 'yago' ),
-    'description'       => '',
-    'section'           => $theme_prefix . 'colors',
-    'id'                => $theme_prefix . 'colors_dropcap_text',
-    'default'           => '#c97c8d',
-    'option'            => 'color',
-    'sanitize_callback' => '',
-    'type'              => 'control',
-);
-
-$options[] = array( 'title' => esc_html__( 'Dropcap Shadow Color', 'yago' ),
-    'description'       => '',
-    'section'           => $theme_prefix . 'colors',
-    'id'                => $theme_prefix . 'colors_dropcap_shadow',
-    'default'           => '#efd9dd',
-    'option'            => 'color',
-    'sanitize_callback' => '',
-    'type'              => 'control',
 );
 
 $options[] = array( 'title' => esc_html__( 'Tag Background Color', 'yago' ),
@@ -979,16 +1000,6 @@ $options[] = array(
             'unit'              => ''
         )
     )
-);
-
-$options[] = array(
-    'title'             => esc_html__( 'Display Dropcap', 'yago' ),
-    'section'           => $theme_prefix . 'blog',
-    'id'                => $theme_prefix . 'blog_dropcap',
-    'default'           => '',
-    'option'            => 'checkbox',
-    'sanitize_callback' => '',
-    'type'              => 'control'
 );
 
 $options[] = array(

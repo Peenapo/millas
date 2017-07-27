@@ -256,9 +256,9 @@ if(function_exists("register_field_group")) {
 					array(
 						0 => 
 						array(
-							'field' => 'null',
-							'operator' => '==',
-							'value' => '',
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
 						),
 					),
 					'allorany' => 'all',
@@ -284,49 +284,45 @@ if(function_exists("register_field_group")) {
 			),
 			1 => 
 			array(
-				'key' => 'field_56b314fd65089',
-				'label' => 'Custom page title',
-				'name' => 'custom_page_title',
-				'_name' => 'custom_page_title',
-				'type' => 'text',
+				'key' => 'field_597995c10953c',
+				'label' => 'Hide title',
+				'name' => 'hide_title',
+				'_name' => 'hide_title',
+				'type' => 'true_false',
 				'order_no' => 1,
 				'instructions' => '',
 				'required' => 0,
-				'id' => 'acf-field-custom_page_title',
-				'class' => 'text',
+				'id' => 'acf-field-hide_title',
+				'class' => 'true_false',
 				'conditional_logic' => 
 				array(
-					'status' => 1,
+					'status' => 0,
 					'rules' => 
 					array(
 						0 => 
 						array(
-							'field' => 'field_568180412c98d',
-							'operator' => '!=',
-							'value' => '1',
+							'field' => 'field_5661828e4ad11',
+							'operator' => '==',
+							'value' => 'full',
 						),
 					),
 					'allorany' => 'all',
 				),
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
+				'message' => '',
+				'default_value' => 0,
 				'field_group' => 4188,
 			),
 			2 => 
 			array(
-				'key' => 'field_56b315156508a',
-				'label' => 'Sub title',
-				'name' => 'sub_title',
-				'_name' => 'sub_title',
+				'key' => 'field_597996e0e5af4',
+				'label' => 'Top title',
+				'name' => 'top_title',
+				'_name' => 'top_title',
 				'type' => 'text',
 				'order_no' => 2,
 				'instructions' => '',
 				'required' => 0,
-				'id' => 'acf-field-sub_title',
+				'id' => 'acf-field-top_title',
 				'class' => 'text',
 				'conditional_logic' => 
 				array(
@@ -335,7 +331,7 @@ if(function_exists("register_field_group")) {
 					array(
 						0 => 
 						array(
-							'field' => 'field_568180412c98d',
+							'field' => 'field_597995c10953c',
 							'operator' => '!=',
 							'value' => '1',
 						),
@@ -352,26 +348,191 @@ if(function_exists("register_field_group")) {
 			),
 			3 => 
 			array(
-				'key' => 'field_5976f5c2ac4f7',
-				'label' => 'Use white header text',
-				'name' => 'white_header',
-				'_name' => 'white_header',
-				'type' => 'true_false',
+				'key' => 'field_56b314fd65089',
+				'label' => 'Custom page title',
+				'name' => 'custom_page_title',
+				'_name' => 'custom_page_title',
+				'type' => 'text',
 				'order_no' => 3,
 				'instructions' => '',
 				'required' => 0,
-				'id' => 'acf-field-white_header',
-				'class' => 'true_false',
+				'id' => 'acf-field-custom_page_title',
+				'class' => 'text',
 				'conditional_logic' => 
 				array(
-					'status' => 0,
+					'status' => 1,
 					'rules' => 
 					array(
 						0 => 
 						array(
-							'field' => 'field_5661828e4ad11',
-							'operator' => '==',
-							'value' => 'full',
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+				'field_group' => 4188,
+			),
+			4 => 
+			array(
+				'key' => 'field_56b315156508a',
+				'label' => 'Sub title',
+				'name' => 'sub_title',
+				'_name' => 'sub_title',
+				'type' => 'text',
+				'order_no' => 4,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-sub_title',
+				'class' => 'text',
+				'conditional_logic' => 
+				array(
+					'status' => 1,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+				'field_group' => 4188,
+			),
+			5 => 
+			array(
+				'key' => 'field_59799b5c35869',
+				'label' => 'Heading text alignment',
+				'name' => 'heading_text_alignment',
+				'_name' => 'heading_text_alignment',
+				'type' => 'select',
+				'order_no' => 5,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-heading_text_alignment',
+				'class' => 'select',
+				'conditional_logic' => 
+				array(
+					'status' => 1,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'choices' => 
+				array(
+					'left' => 'Left',
+					'center' => 'Center',
+					'right' => 'Right',
+				),
+				'default_value' => 'center',
+				'allow_null' => 0,
+				'multiple' => 0,
+				'field_group' => 4188,
+			),
+			6 => 
+			array(
+				'key' => 'field_5979a01f60daa',
+				'label' => 'Heading background color',
+				'name' => 'heading_bg_color',
+				'_name' => 'heading_bg_color',
+				'type' => 'color_picker',
+				'order_no' => 6,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-heading_bg_color',
+				'class' => 'color_picker',
+				'conditional_logic' => 
+				array(
+					'status' => 1,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'default_value' => '',
+				'field_group' => 4188,
+			),
+			7 => 
+			array(
+				'key' => 'field_5979a09352a03',
+				'label' => 'Heading background image',
+				'name' => 'heading_image',
+				'_name' => 'heading_image',
+				'type' => 'image',
+				'order_no' => 7,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-heading_image',
+				'class' => 'image',
+				'conditional_logic' => 
+				array(
+					'status' => 1,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'save_format' => 'id',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+				'field_group' => 4188,
+			),
+			8 => 
+			array(
+				'key' => 'field_5976f5c2ac4f7',
+				'label' => 'Use dark header text',
+				'name' => 'dark_header_text',
+				'_name' => 'dark_header_text',
+				'type' => 'true_false',
+				'order_no' => 8,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-dark_header_text',
+				'class' => 'true_false',
+				'conditional_logic' => 
+				array(
+					'status' => 1,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_597995c10953c',
+							'operator' => '!=',
+							'value' => '1',
 						),
 					),
 					'allorany' => 'all',

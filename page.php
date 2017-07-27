@@ -12,11 +12,9 @@ get_header(); ?>
 
 <?php
 
-$is_builder_used = class_exists('Playouts_Public') and Playouts_Public::is_builder_used();
+$is_builder_used = ( class_exists('Playouts_Public') and Playouts_Public::is_builder_used() );
 
-if( ! $is_builder_used ) {
-    get_template_part('templates/page-header');
-}
+get_template_part('templates/page-header');
 
 ?>
 
