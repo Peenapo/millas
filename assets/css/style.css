@@ -579,24 +579,20 @@ ul.page-numbers {padding:50px 0 120px 0;margin:0;list-style:none;text-align:cent
 
 
 /* contact form 7 */
-.wpcf7-form input[type="text"], .wpcf7-form input[type="email"], .wpcf7-form textarea {width:100%;padding:10px;}
+.wpcf7-form input[type="text"], .wpcf7-form input[type="email"], .wpcf7-form textarea {width:100%;padding:10px 0;margin-bottom:0;border:0;border-bottom:3px solid #dedede;color:#000;}
+.wpcf7-form textarea {height:130px;}
 div.wpcf7-validation-errors {position:static;float:left;width:100%;border:0;outline:none;padding:0;margin:10px 0 0 0;color:red;}
 div.wpcf7-mail-sent-ok {position:static;float:left;width:100%;border:0;outline:none;padding:0;margin:10px 0 0 0;color:#48ea5b;}
 .wpcf7-form p {margin:0;}
 input[type="submit"].wpcf7-submit {display:block;padding:15px 20px;margin-top:20px;}
 
 /* contact form */
-.cf7-form-row {width:100%;margin-bottom:0;font-size:0;}
-.cf7-form-row > * {font-size:1rem;}
-.cf7-form-row .cf7-column-full, .cf7-form-row .cf7-column-half {width:100%;}
-.cf7-form-row .cf7-column-half {display:inline-block;width:46.25%;margin-right:5.75%;}
-.cf7-form-row .cf7-column-half:nth-child(2n) {margin-left:1.75%;margin-right:0;}
-.wpcf7-form .cf7-form-row input[type="text"], .wpcf7-form .cf7-form-row input[type="email"], .wpcf7-form .cf7-form-row textarea {
-    padding:0;border:0;border:0;border-bottom:3px solid #ddd;color:#000;line-height:65px;
-}
-.wpcf7-form .cf7-form-row textarea {height:150px;}
-.wpcf7-form .cf7-form-row .wpcf7-submit {display:inline-block;padding:0 35px;line-height:45px;margin-top:10px;background-color:#111;color:#fff;border:0;}
-.wpcf7-form .cf7-form-row .wpcf7-submit:hover {background-color:#f1f1f1;color:#000;}
+.bw-contact-form {font-size:0;}
+.bw-contact-form p {font-size:1rem;margin-bottom:30px;}
+.bw-field-half {display:inline-block;width:50%;padding-right:15px;}
+.bw-field-half-last {padding-right:0;padding-left:15px;}
+.bw-contact-form input[type="submit"] {border:0;background-color:#111;color:#fff;line-height:45px;padding:0 30px;border-radius:50px;}
+.bw-contact-form input[type="submit"]:hover {background-color:#333;}
 
 /* 404 */
 .bw-404 {}
