@@ -752,7 +752,7 @@ $options[] = array(
     'transport'         => 'postMessage',
     'css'               => array(
         'property'          => 'bottom',
-        'selector'          => '.main-navigation ul li.current-menu-item > a:after, .main-navigation ul li.current-menu-ancestor > a:after',
+        'selector'          => '.main-navigation ul.menu > li.current-menu-item > a:after, .main-navigation ul.menu > li.current-menu-ancestor > a:after',
         'unit'              => 'px'
     )
 );
