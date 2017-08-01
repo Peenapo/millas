@@ -26,10 +26,12 @@ var App = {
             if( ! $('.bw-is-megamenu').length ) { return; }
 
             $('.bw-is-megamenu > a').on('mouseenter', function() {
-                var index = $('.bw-is-megamenu').index( $(this).closest('.bw-is-megamenu') );
+                var $mega = $(this).closest('.bw-is-megamenu');
+                var index = $('.bw-is-megamenu').index( $mega );
                 $('.bw-is-megamenu').removeClass('bw-expand-megamenu');
                 clearTimeout( App.megamenu.timeout_hide_menu[ index ] );
-                $(this).closest('.bw-is-megamenu').addClass('bw-expand-megamenu');
+                $mega.addClass('bw-expand-megamenu');
+                TweenLite.to( $mega.find('.bw-megamenu-outer:first'), .2, { height: $mega.find('.bw-megamenu:first').outerHeight(), ease: Power2.easeInOut } );
             });
 
             $('.bw-is-megamenu').on('mouseenter', function() {
@@ -40,7 +42,8 @@ var App = {
                 var index = $('.bw-is-megamenu').index( self );
                 App.megamenu.timeout_hide_menu[ index ] = setTimeout(function() {
                     self.removeClass('bw-expand-megamenu');
-                }, 300);
+                    TweenLite.to( self.find('.bw-megamenu-outer:first'), .2, { height: 0, ease: Power2.easeInOut } );
+                }, 100);
 
             });;
 
