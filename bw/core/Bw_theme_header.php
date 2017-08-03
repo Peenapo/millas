@@ -48,10 +48,8 @@ class Bw_theme_header {
 
         if( class_exists('Playouts_Public') and Playouts_Public::is_builder_used() ) { $classes[] = 'bw-is-builder-active'; }
         if( is_page() ) {
-            if( ! Bw::get_meta('hide_title') ) {
-                if( ! Bw::get_meta('dark_header_text') ) {
-                    $classes[] = 'pl-is-header-light';
-                }
+            if( Bw::get_meta('light_header_text') ) {
+                $classes[] = 'pl-is-header-light';
             }
         }
 

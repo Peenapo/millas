@@ -514,18 +514,18 @@ if(function_exists("register_field_group")) {
 			8 => 
 			array(
 				'key' => 'field_5976f5c2ac4f7',
-				'label' => 'Use dark header text',
-				'name' => 'dark_header_text',
-				'_name' => 'dark_header_text',
+				'label' => 'Use light header text',
+				'name' => 'light_header_text',
+				'_name' => 'light_header_text',
 				'type' => 'true_false',
 				'order_no' => 8,
 				'instructions' => '',
 				'required' => 0,
-				'id' => 'acf-field-dark_header_text',
+				'id' => 'acf-field-light_header_text',
 				'class' => 'true_false',
 				'conditional_logic' => 
 				array(
-					'status' => 1,
+					'status' => 0,
 					'rules' => 
 					array(
 						0 => 

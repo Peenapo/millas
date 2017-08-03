@@ -47,7 +47,7 @@ class Bw_theme {
             ),
             Bw::$theme_prefix . '_fonts_headings_font' => array(
                 'default' => array( 'family' => 'Overpass' ),
-                'selectors' => 'h1,h2,h3,h4,h5,h6, blockquote p, .bw-footer-logo span'
+                'selectors' => 'h1,h2,h3,h4,h5,h6, blockquote, .bw-footer-logo span'
             ),
             Bw::$theme_prefix . '_fonts_sub_headings_font' => array(
                 'default' => array( 'family' => 'Overpass' ),

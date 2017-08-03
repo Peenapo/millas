@@ -908,29 +908,6 @@ $options[] = array( 'title' => esc_html__( 'Accent Color', 'yago' ),
     )
 );
 
-$options[] = array( 'title' => esc_html__( 'Post Accent Color', 'yago' ),
-    'description'       => '',
-    'section'           => $theme_prefix . 'colors',
-    'id'                => $theme_prefix . 'colors_post_main',
-    'default'           => '#c97c8d',
-    'option'            => 'color',
-    'sanitize_callback' => '',
-    'type'              => 'control',
-    'transport'         => 'postMessage',
-    'css'               => array(
-        array(
-            'property'          => 'color',
-            'selector'          => '.bw-intro, blockquote, blockquote p, blockquote:after',
-            'unit'              => ''
-        ),
-        array(
-            'property'          => 'border-color',
-            'selector'          => 'blockquote',
-            'unit'              => ''
-        ),
-    )
-);
-
 $options[] = array( 'title' => esc_html__( 'Tag Background Color', 'yago' ),
     'description'       => '',
     'section'           => $theme_prefix . 'colors',

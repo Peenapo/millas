@@ -10,7 +10,7 @@
         $alignment = Bw::get_meta( 'heading_text_alignment' );
         $heading_bg = Bw::get_meta( 'heading_bg_color' );
 
-        $heading_classes .= Bw::get_meta('dark_header_text') ? ' bw-is-text-dark' : '';
+        $heading_classes .= Bw::get_meta('light_header_text') ? ' bw-is-text-light' : '';
         $heading_style .= 'text-align:' . ( $alignment ? esc_attr( $alignment ) : 'center' ) . ';';
         $heading_style .= $heading_bg ? 'background-color:' . esc_attr( $heading_bg ) . ';' : '';
 
@@ -29,7 +29,7 @@
             <div class="bw-row">
                 <?php if( ! empty( $top_title ) ) { echo '<span>' . esc_attr( $top_title ) . '</span>'; } ?>
                 <h1 class="bw-page-header-title"><?php echo $title; ?></h1>
-                <?php if( ! empty( $sub_title ) ) { echo '<p>' . esc_attr( $sub_title ) . '</p>'; } ?>
+                <?php if( ! empty( $sub_title ) ) { echo '<p>' . wp_kses_data( $sub_title ) . '</p>'; } ?>
             </div>
         </div>
 
