@@ -168,7 +168,7 @@ class Bw_setup {
     }
 
     static function new_excerpt_length( $length ) {
-        return 60;
+        return 20;
     }
 
 	static function check_post_pass() {

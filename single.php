@@ -6,9 +6,9 @@
 
 get_header(); ?>
 
-<?php get_template_part('templates/page-header'); ?>
+<?php //get_template_part('templates/page-header'); ?>
 
-<div class="container bw-row<?php if( Bw::has_sidebar() ) { echo ' bw-has-sidebar'; } ?>">
+<div class="container<?php if( Bw::has_sidebar() ) { echo ' bw-has-sidebar'; } ?>">
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
@@ -18,14 +18,10 @@ get_header(); ?>
 
             get_template_part( 'templates/content/content', get_post_format() );
 
-            echo '<div class="bw-row bw-clearfix">';
-                //the_post_navigation();
-
-                // if comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() or get_comments_number() ) :
-                    comments_template();
-                endif;
-            echo '</div>';
+            // if comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() or get_comments_number() ) :
+                comments_template();
+            endif;
 
         endwhile;
         ?>

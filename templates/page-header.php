@@ -5,6 +5,7 @@
         $heading_classes = $heading_style = '';
         $top_title = Bw::get_meta('top_title');
         $title = ! empty( Bw::get_meta('custom_page_title') ) ? esc_attr( Bw::get_meta('custom_page_title') ) : get_the_title();
+        if( is_home() ) { $title = get_the_title( get_option( 'page_for_posts', true ) ); }
         $sub_title = Bw::get_meta('sub_title');
         $cover_image = Bw::get_meta( 'heading_image' );
         $alignment = Bw::get_meta( 'heading_text_alignment' );

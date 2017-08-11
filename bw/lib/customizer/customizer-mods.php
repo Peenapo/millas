@@ -103,6 +103,15 @@ $options[] = array(
 );
 
 $options[] = array(
+    'title'             => esc_html__( 'General', 'yago' ),
+    'panel'             => $theme_prefix . 'header',
+    'id'                => $theme_prefix . 'header_general',
+    'priority'          => 10,
+    'theme_supports'    => '',
+    'type'              => 'section'
+);
+
+$options[] = array(
     'title'             => esc_html__( 'Widgets Area', 'yago' ),
     'panel'             => $theme_prefix . 'footer',
     'id'                => $theme_prefix . 'footer_widgets',
@@ -190,6 +199,16 @@ $options[] = array(
     'option'            => 'image',
     'sanitize_callback' => 'esc_url',
     'type'              => 'control'
+);
+
+$options[] = array(
+    'title'             => esc_html__( 'Enable Sticky Header', 'yago' ),
+    'section'           => $theme_prefix . 'header_general',
+    'id'                => $theme_prefix . 'header_general_sticky',
+    'default'           => '',
+    'option'            => 'checkbox',
+    'sanitize_callback' => '',
+    'type'              => 'control',
 );
 
 $options[] = array(

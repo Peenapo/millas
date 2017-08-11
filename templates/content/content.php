@@ -6,59 +6,61 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php /*if( has_post_thumbnail() ): ?>
-        <figure class="featured-image">
+	<header class="entry-header bw-row">
+		<div class="category-list">
+			<?php echo get_the_category_list(''); ?>
+		</div>
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+		<span class="post-date">
+			<a href="<?php the_permalink(); ?>">
+				<time class="entry-date"><?php echo get_the_date(); ?></time>
+			</a>
+		</span>
+    </header>
+
+    <?php if( has_post_thumbnail() ): ?>
+        <figure class="featured-image bw-row-medium">
             <?php the_post_thumbnail(); ?>
         </figure>
-    <?php endif;*/ ?>
+    <?php endif; ?>
 
-    <?php /* ?><header class="entry-header bw-row">
-        <div class="entry-meta">
-            <span class="category-list">
-                <?php echo get_the_category_list(''); ?>
-            </span>
-            <span class="post-date">
-                <a href="<?php the_permalink(); ?>">
-                    <time class="entry-date"><?php echo get_the_date(); ?></time>
-                </a>
-            </span>
-        </div>
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><?php */ ?>
+	<div class="bw-row-tiny">
 
-	<div class="entry-content bw-row bw-clearfix">
-		<?php
-			the_content( sprintf(
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'yago' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			));
+		<div class="entry-content bw-row bw-clearfix">
+			<?php
+				the_content( sprintf(
+					wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'yago' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				));
 
-			wp_link_pages( array(
-				'before' => '<div class="bw-paged">' . esc_html__( 'Pages:', 'yago' ),
-				'after'  => '</div>',
-			));
-		?>
+				wp_link_pages( array(
+					'before' => '<div class="bw-paged">' . esc_html__( 'Pages:', 'yago' ),
+					'after'  => '</div>',
+				));
+			?>
+		</div>
+
+	    <footer class="entry-footer bw-row">
+
+	        <?php if( Bw::get_theme_option( 'blog_cats' ) ): ?>
+	            <div class="cat-links">
+	                <div class="bw-tags"><span><?php esc_html_e('Posted in:', 'yago'); ?></span> <?php echo get_the_category_list(', '); ?></div>
+	            </div>
+	        <?php endif; ?>
+
+	        <?php if( Bw::get_theme_option( 'blog_tags' ) ): ?>
+	            <div class="tag-links">
+	                <?php echo get_the_tag_list('<div class="bw-tags"><span>' . esc_html__('Tagged as:', 'yago') . '</span> ',', ','</div>'); ?>
+	            </div>
+	        <?php endif; ?>
+
+	        <?php if( Bw::get_theme_option( 'blog_enable_share' ) ): ?>
+	            <?php get_template_part('templates/social-meta-icons'); ?>
+	        <?php endif; ?>
+
+	    </footer>
+
 	</div>
-
-    <footer class="entry-footer bw-row">
-
-        <?php if( Bw::get_theme_option( 'blog_cats' ) ): ?>
-            <div class="cat-links">
-                <div class="bw-tags"><span><?php esc_html_e('Posted in:', 'yago'); ?></span> <?php echo get_the_category_list(', '); ?></div>
-            </div>
-        <?php endif; ?>
-
-        <?php if( Bw::get_theme_option( 'blog_tags' ) ): ?>
-            <div class="tag-links">
-                <?php echo get_the_tag_list('<div class="bw-tags"><span>' . esc_html__('Tagged as:', 'yago') . '</span> ',', ','</div>'); ?>
-            </div>
-        <?php endif; ?>
-
-        <?php if( Bw::get_theme_option( 'blog_enable_share' ) ): ?>
-            <?php get_template_part('templates/social-meta-icons'); ?>
-        <?php endif; ?>
-
-    </footer>
 
     <?php if( Bw::get_theme_option('blog_related') ): ?>
         <?php get_template_part('templates/related-articles'); ?>

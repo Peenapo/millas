@@ -25,6 +25,7 @@ class Bw_theme {
     static function theme_thumbnails() {
 
         add_image_size( 'bw_1920x1080_true', 1920, 1080, true );
+        add_image_size( 'bw_500x750_true', 500, 750, true );
 
     }
 
@@ -35,7 +36,7 @@ class Bw_theme {
 
             Bw::$theme_prefix . '_fonts_body_font' => array(
                 'default' => array( 'family' => 'Nunito' ),
-                'selectors' => 'body, .main-navigation .bw-header-line, .bw-masonry-item .entry-title', //'self' => true
+                'selectors' => 'body, .main-navigation .bw-header-line', //'self' => true
             ),
             Bw::$theme_prefix . '_fonts_logo_font' => array(
                 'default' => array( 'family' => 'Overpass' ),
@@ -47,7 +48,7 @@ class Bw_theme {
             ),
             Bw::$theme_prefix . '_fonts_headings_font' => array(
                 'default' => array( 'family' => 'Overpass' ),
-                'selectors' => 'h1,h2,h3,h4,h5,h6, blockquote, .bw-footer-logo span'
+                'selectors' => 'h1,h2,h3,h4,h5,h6, blockquote, .bw-footer-logo span, .bw-intro, .bw-comment-toggle'
             ),
             Bw::$theme_prefix . '_fonts_sub_headings_font' => array(
                 'default' => array( 'family' => 'Overpass' ),
@@ -83,6 +84,10 @@ class Bw_theme {
         }
 
         # js
+        if( is_home() ) {
+            wp_enqueue_script( 'bw-isotope', PPORTFOLIO_URL . 'assets/js/vendor/isotope.pkgd.min.js', array( 'jquery' ), '1.0', true );
+        }
+
         wp_enqueue_script( 'bw-vendors', BW_URI . 'assets/js/vendors.js', array('jquery'), false, true );
         wp_enqueue_script( 'bw-main', BW_URI . 'assets/js/main.js', array('jquery', 'bw-vendors'), false, true );
 
