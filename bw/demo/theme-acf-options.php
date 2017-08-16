@@ -541,6 +541,36 @@ if(function_exists("register_field_group")) {
 				'default_value' => 0,
 				'field_group' => 4188,
 			),
+			9 => 
+			array(
+				'key' => 'field_59929b79bc897',
+				'label' => 'Hide footer',
+				'name' => 'hide_footer',
+				'_name' => 'hide_footer',
+				'type' => 'true_false',
+				'order_no' => 9,
+				'instructions' => '',
+				'required' => 0,
+				'id' => 'acf-field-hide_footer',
+				'class' => 'true_false',
+				'conditional_logic' => 
+				array(
+					'status' => 0,
+					'rules' => 
+					array(
+						0 => 
+						array(
+							'field' => 'field_5661828e4ad11',
+							'operator' => '==',
+							'value' => 'full',
+						),
+					),
+					'allorany' => 'all',
+				),
+				'message' => '',
+				'default_value' => 0,
+				'field_group' => 4188,
+			),
 		),
 		'location' => 
 		array(

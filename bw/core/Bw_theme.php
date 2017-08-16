@@ -88,6 +88,7 @@ class Bw_theme {
             wp_enqueue_script( 'bw-isotope', PPORTFOLIO_URL . 'assets/js/vendor/isotope.pkgd.min.js', array( 'jquery' ), '1.0', true );
         }
 
+        wp_enqueue_script( 'hoverIntent' );
         wp_enqueue_script( 'bw-vendors', BW_URI . 'assets/js/vendors.js', array('jquery'), false, true );
         wp_enqueue_script( 'bw-main', BW_URI . 'assets/js/main.js', array('jquery', 'bw-vendors'), false, true );
 

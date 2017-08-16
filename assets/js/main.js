@@ -167,13 +167,22 @@ var App = {
 
             if( ! $('.bw-is-megamenu').length ) { return; }
 
-            $('.bw-is-megamenu > a').on('mouseenter', function() {
+            $('.bw-is-megamenu').hoverIntent({
+                 over: App.megamenu.over,
+                 out: App.megamenu.out,
+                 interval: 100,
+                 timeout: 100
+            });
+
+            /*$('.bw-is-megamenu > a').on('mouseenter', function() {
+
                 var $mega = $(this).closest('.bw-is-megamenu');
                 var index = $('.bw-is-megamenu').index( $mega );
                 $('.bw-is-megamenu').removeClass('bw-expand-megamenu');
                 clearTimeout( App.megamenu.timeout_hide_menu[ index ] );
                 $mega.addClass('bw-expand-megamenu');
-                TweenLite.to( $mega.find('.bw-megamenu-outer:first'), .2, { height: $mega.find('.bw-megamenu:first').outerHeight(), ease: Power2.easeInOut } );
+                TweenLite.fromTo( $mega.find('.bw-megamenu-outer'), .2, { opacity: 0, visibility: 'hidden' }, { opacity: 1, visibility: 'visible', ease: Power2.easeInOut } );
+
             });
 
             $('.bw-is-megamenu').on('mouseenter', function() {
@@ -184,14 +193,24 @@ var App = {
                 var index = $('.bw-is-megamenu').index( self );
                 App.megamenu.timeout_hide_menu[ index ] = setTimeout(function() {
                     self.removeClass('bw-expand-megamenu');
-                    TweenLite.to( self.find('.bw-megamenu-outer:first'), .2, { height: 0, ease: Power2.easeInOut } );
+                    TweenLite.set( self.find('.bw-megamenu-outer'), { opacity: 0, visibility: 'hidden' } );
                 }, 100);
 
-            });;
+            });*/
+
+        },
+
+        over: function() {
+
+            $(this).addClass('bw-expand-megamenu');
+
+        },
+
+        out: function() {
+
+            $(this).removeClass('bw-expand-megamenu');
 
         }
-
-
 
     },
 
